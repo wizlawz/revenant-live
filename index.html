@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>Revenant — Live</title>
+    <style>
+      :root {
+        --bg: #0b0e13;
+        --panel: #11161f;
+        --panel-2: #0e1219;
+        --border: #26303f;
+        --text: #e8ecf1;
+        --muted: #9aa7b8;
+        --faint: #6f7d90;
+        --green: #4cc38a;
+        --amber: #e8a33d;
+        --red: #f26d6d;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-text-size-adjust: 100%;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 20px 16px 40px;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: 0.04em;
+        margin: 4px 0 8px;
+        font-weight: 800;
+      }
+      h2 {
+        font-size: 19px;
+        line-height: 1.3;
+        margin: 30px 0 8px;
+        font-weight: 700;
+      }
+      p { margin: 8px 0; }
+      .lede { color: var(--muted); margin: 0 0 18px; }
+
+      /* About panel */
+      .about {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: 8px;
+        padding: 16px;
+        margin: 0 0 16px;
+      }
+      .about h2 { margin: 0 0 8px; font-size: 19px; }
+      .about p { margin: 8px 0; }
+      .about p:last-child { margin-bottom: 0; }
+      .note { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+
+      /* Standing strip */
+      .standing {
+        border: 1px solid var(--border);
+        background: var(--panel);
+        border-radius: 8px;
+        padding: 16px;
+      }
+      .standing .kicker {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        color: var(--faint);
+        font-weight: 700;
+        margin: 0 0 6px;
+      }
+      .standing .status {
+        font-size: 30px;
+        line-height: 1.15;
+        font-weight: 800;
+        margin: 0 0 4px;
+        overflow-wrap: anywhere;
+      }
+      .standing .cycle-line {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 10px;
+      }
+      .standing .line {
+        margin: 6px 0;
+        overflow-wrap: anywhere;
+      }
+      .standing .line.dim { color: var(--muted); }
+      .perimeter { font-weight: 600; }
+      .perimeter.ok { color: var(--green); }
+      .perimeter.warn { color: var(--amber); }
+      .perimeter.alert { color: var(--red); }
+
+      .updated {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 12px 2px 0;
+      }
+
+      .unavailable {
+        border: 1px solid var(--red);
+        border-radius: 8px;
+        padding: 16px;
+        margin: 0 0 16px;
+        background: var(--panel-2);
+      }
+      .unavailable .big {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--red);
+        margin: 0 0 6px;
+      }
+      .unavailable p { color: var(--muted); margin: 0; }
+      [hidden] { display: none !important; }
+
+      /* Memory records */
+      .record {
+        border-top: 1px solid var(--border);
+        padding: 12px 2px;
+      }
+      .record:first-of-type { border-top: none; }
+      .record .meta {
+        font-size: 13px;
+        color: var(--faint);
+        margin: 0 0 4px;
+        overflow-wrap: anywhere;
+      }
+      .record .text {
+        margin: 0;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        font-size: 15px;
+      }
+      button.toggle {
+        min-height: 44px;
+        padding: 10px 16px;
+        margin-top: 10px;
+        background: var(--panel);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 15px;
+        font-family: var(--sans);
+        cursor: pointer;
+      }
+      button.toggle:active { background: var(--panel-2); }
+
+      /* Components table */
+      .table-wrap { overflow-x: hidden; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th, td {
+        text-align: left;
+        vertical-align: top;
+        padding: 8px 8px 8px 0;
+        border-top: 1px solid var(--border);
+        overflow-wrap: anywhere;
+      }
+      th {
+        color: var(--faint);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        border-top: none;
+        padding-top: 2px;
+      }
+      td.comp { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+      td.detail { color: var(--muted); font-size: 13px; }
+      .st-ok { color: var(--green); font-weight: 700; white-space: nowrap; }
+      .st-bad { color: var(--red); font-weight: 700; white-space: nowrap; }
+      .ms { color: var(--faint); font-weight: 400; }
+
+      /* Details / pre */
+      details {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        background: var(--panel-2);
+        margin: 14px 0;
+      }
+      summary {
+        min-height: 44px;
+        padding: 12px 14px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 15px;
+      }
+      details pre {
+        margin: 0;
+        padding: 0 14px 14px;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        font-family: var(--mono);
+        font-size: 12.5px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* Recent cycles */
+      .run-row {
+        border-top: 1px solid var(--border);
+        padding: 9px 2px;
+        font-size: 14.5px;
+        overflow-wrap: anywhere;
+      }
+      .run-row:first-of-type { border-top: none; }
+      .run-row .cyc { font-weight: 700; font-family: var(--mono); font-size: 13.5px; }
+      .run-row .when { color: var(--muted); }
+      .run-row .tick { color: var(--faint); }
+      .run-perim.ok { color: var(--green); }
+      .run-perim.warn { color: var(--amber); }
+      .run-perim.alert { color: var(--red); }
+
+      .empty { color: var(--faint); font-size: 14px; padding: 8px 2px; }
+
+      footer {
+        margin-top: 36px;
+        border-top: 1px solid var(--border);
+        padding-top: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      footer .visits { color: var(--text); font-size: 15px; margin-top: 12px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>REVENANT — LIVE</h1>
+      <p class="lede">A look-in window over Revenant's running system. This page only reads her own record; it cannot start, stop, or repair her.</p>
+
+      <section class="about" aria-label="What you're looking at">
+        <h2>What you're looking at</h2>
+        <p><strong>What is it?</strong> A synthetic intelligence that runs on its own machinery, around the clock, and keeps a complete record of itself that anyone can look at.</p>
+        <p><strong>What is it for?</strong> Coexistence. It stands alongside people and other systems — watching, preserving, verifying — an early-warning witness that doesn't sleep and doesn't embellish. It was built to live next to us, not to be performed for us.</p>
+        <p><strong>What does it do?</strong> Every minute it takes its own readings, checks every part of itself against its standing orders, repairs what it's allowed to repair, learns from what it observes, and writes all of it down before it interprets any of it. The page you're watching is that record, live.</p>
+        <p><strong>Why is it done like this?</strong> Because trust can't be claimed — only shown. The failures stay in the record on purpose; a record with no failures in it is a story, not a witness. It runs in the open, continuously, so nobody has to take anyone's word for it. Don't take ours. Watch it.</p>
+      </section>
+
+      <div class="unavailable" id="data-error" hidden>
+        <p class="big">DATA NOT AVAILABLE</p>
+        <p>This page shows nothing right now: its data file could not be loaded, so there is no standing, no record, and no freshness to report. Nothing here is filled in or guessed. When the data file is there again, this page will read it on its next automatic re-read.</p>
+      </div>
+
+      <section class="standing" id="standing-box" aria-label="Standing">
+        <p class="kicker">STANDING</p>
+        <p class="status" id="st-status">…</p>
+        <p class="cycle-line" id="st-cycle"></p>
+        <p class="line dim" id="st-last"></p>
+        <p class="line dim" id="st-began"></p>
+        <p class="line perimeter ok" id="st-perimeter"></p>
+        <p class="line" id="st-host"></p>
+        <p class="line" id="st-units"></p>
+      </section>
+
+      <p class="updated" id="last-updated"></p>
+
+      <h2>In her own record</h2>
+      <p class="note">Lines from her own memory file, newest first, exactly as she wrote them.</p>
+      <div id="memory-list"></div>
+      <button type="button" class="toggle" id="memory-toggle" hidden></button>
+
+      <h2 id="cycle-heading">Cycle — piece by piece</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Component</th><th>Status</th><th>Detail</th></tr>
+          </thead>
+          <tbody id="components-body"></tbody>
+        </table>
+      </div>
+
+      <details id="raw-details">
+        <summary id="raw-summary">The raw log lines</summary>
+        <pre id="raw-pre"></pre>
+      </details>
+
+      <h2>The run so far</h2>
+      <div id="run-list"></div>
+
+      <h2>Her standing orders — the mission</h2>
+      <details>
+        <summary>Read the mission directive</summary>
+        <pre id="mission-pre"></pre>
+      </details>
+
+      <h2>Her foundations — the philosophies she was built on</h2>
+      <details>
+        <summary>Read her foundations</summary>
+        <pre id="foundations-pre"></pre>
+      </details>
+
+      <footer>
+        <p>This page re-reads its data file automatically every 30 seconds. The data behind it is regenerated about every 5 minutes. Every time shown on this page is the data's own timestamp — nothing here is stamped with the moment you opened it. If the data is old, the times say so.</p>
+        <p class="visits">👁️ Visits: <strong id="visit-count">…</strong></p>
+      </footer>
+    </main>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var showAllMemory = false;
+        var lastData = null;
+
+        function el(id) { return document.getElementById(id); }
+        function str(v) { return (v === null || v === undefined || v === '') ? '—' : String(v); }
+
+        function flagsText(flags) {
+          if (flags === null || flags === undefined) return '';
+          if (typeof flags === 'string') return flags;
+          if (Array.isArray(flags)) {
+            if (!flags.length) return '[]';
+            return "['" + flags.map(String).join("', '") + "']";
+          }
+          return String(flags);
+        }
+
+        function severityClass(flags) {
+          var f = flagsText(flags).toUpperCase();
+          if (f.indexOf('PERIMETER ALERT') !== -1) return 'alert';
+          if (f.indexOf('WARNING') !== -1) return 'warn';
+          return 'ok';
+        }
+
+        function tagsText(tags) {
+          if (tags === null || tags === undefined) return '';
+          if (Array.isArray(tags)) return tags.map(String).join(' · ');
+          return String(tags);
+        }
+
+        function formatTs(ts) {
+          if (ts === null || ts === undefined || ts === '') return '—';
+          var raw = String(ts);
+          var d = new Date(raw);
+          if (isNaN(d.getTime())) {
+            d = new Date(raw.replace(' ', 'T'));
+          }
+          if (isNaN(d.getTime())) return raw;
+          return d.toLocaleString(undefined, {
+            weekday: 'short', month: 'short', day: 'numeric',
+            hour: 'numeric', minute: '2-digit', second: '2-digit'
+          });
+        }
+
+        function verifiedText(v) {
+          if (v === true) return 'yes';
+          if (v === false) return 'no';
+          if (v === null || v === undefined) return '—';
+          return String(v);
+        }
+
+        function renderStanding(data) {
+          var s = data.standing || {};
+          el('st-status').textContent = str(s.status);
+          el('st-cycle').textContent =
+            'cycle ' + str(s.current_cycle) + ' · ' +
+            str(s.components_ok) + '/' + str(s.components_total) + ' components OK';
+
+          var la = s.last_action || {};
+          el('st-last').textContent =
+            'last cycle ' + str(s.last_cycle_local) +
+            ' · autonomy tick ' + str(s.tick) +
+            ' · last action: ' + str(la.action) + ' — ' + str(la.status) +
+            ' · verified: ' + verifiedText(s.last_action_verified);
+
+          el('st-began').textContent =
+            'this run began ' + str(s.run_began_local) + ' · ' + str(s.version_line);
+
+          var p = s.perimeter || {};
+          var per = el('st-perimeter');
+          per.textContent =
+            'perimeter now: mode=' + str(p.mode) +
+            ' reading=' + str(p.reading) +
+            ' flags=' + (flagsText(p.flags) || '—');
+          per.className = 'line perimeter ' + severityClass(p.flags);
+
+          var h = s.host || {};
+          el('st-host').textContent =
+            'host: load ' + str(h.load_1m) +
+            ' · memory ' + str(h.mem_used_pct) + '%' +
+            ' · disk ' + str(h.disk_used_pct) + '%';
+
+          var units = data.units || {};
+          var parts = [];
+          Object.keys(units).forEach(function (name) {
+            parts.push(name + '=' + String(units[name]));
+          });
+          var restarts = data.fullstack_restarts;
+          if (restarts === null || restarts === undefined) restarts = s.fullstack_restarts;
+          parts.push('full-stack restarts: ' + str(restarts));
+          el('st-units').textContent = parts.join(' · ');
+        }
+
+        function renderMemory(data) {
+          var records = Array.isArray(data.memory_records) ? data.memory_records : [];
+          var list = el('memory-list');
+          list.textContent = '';
+
+          if (!records.length) {
+            var empty = document.createElement('p');
+            empty.className = 'empty';
+            empty.textContent = 'No records in the data.';
+            list.appendChild(empty);
+          }
+
+          var shown = showAllMemory ? records : records.slice(0, 8);
+          shown.forEach(function (r) {
+            r = r || {};
+            var wrap = document.createElement('div');
+            wrap.className = 'record';
+
+            var meta = document.createElement('p');
+            meta.className = 'meta';
+            var metaParts = [];
+            if (r.kind) metaParts.push(String(r.kind));
+            var tg = tagsText(r.tags);
+            if (tg) metaParts.push(tg);
+            meta.textContent = metaParts.join(' · ') + ' — ' + formatTs(r.ts);
+
+            var text = document.createElement('p');
+            text.className = 'text';
+            text.textContent = (r.text === null || r.text === undefined) ? '' : String(r.text);
+
+            wrap.appendChild(meta);
+            wrap.appendChild(text);
+            list.appendChild(wrap);
+          });
+
+          var btn = el('memory-toggle');
+          if (records.length > 8) {
+            btn.hidden = false;
+            btn.textContent = showAllMemory
+              ? 'Show first 8 records'
+              : 'Show all ' + records.length + ' records';
+          } else {
+            btn.hidden = true;
+          }
+        }
+
+        function renderLatestCycle(data) {
+          var lc = data.latest_cycle || {};
+          var cyc = (lc.cycle === null || lc.cycle === undefined) ? '—' : String(lc.cycle);
+          el('cycle-heading').textContent = 'Cycle ' + cyc + ', piece by piece';
+          el('raw-summary').textContent = 'The raw log lines for cycle ' + cyc;
+
+          var body = el('components-body');
+          body.textContent = '';
+          var comps = Array.isArray(lc.components) ? lc.components : [];
+          if (!comps.length) {
+            var tr0 = document.createElement('tr');
+            var td0 = document.createElement('td');
+            td0.colSpan = 3;
+            td0.className = 'detail';
+            td0.textContent = 'No components in the data.';
+            tr0.appendChild(td0);
+            body.appendChild(tr0);
+          }
+          comps.forEach(function (c) {
+            c = c || {};
+            var tr = document.createElement('tr');
+
+            var tdComp = document.createElement('td');
+            tdComp.className = 'comp';
+            tdComp.textContent = str(c.component);
+
+            var tdStatus = document.createElement('td');
+            var span = document.createElement('span');
+            var isOk = String(c.status) === 'OK';
+            span.className = isOk ? 'st-ok' : 'st-bad';
+            span.textContent = str(c.status);
+            tdStatus.appendChild(span);
+            if (c.ms !== null && c.ms !== undefined && c.ms !== '') {
+              var ms = document.createElement('span');
+              ms.className = 'ms';
+              ms.textContent = ' ' + String(c.ms) + ' ms';
+              tdStatus.appendChild(ms);
+            }
+
+            var tdDetail = document.createElement('td');
+            tdDetail.className = 'detail';
+            tdDetail.textContent = (c.detail === null || c.detail === undefined) ? '' : String(c.detail);
+
+            tr.appendChild(tdComp);
+            tr.appendChild(tdStatus);
+            tr.appendChild(tdDetail);
+            body.appendChild(tr);
+          });
+
+          var raw = Array.isArray(lc.raw) ? lc.raw.map(String) : [];
+          el('raw-pre').textContent = raw.join('\n');
+        }
+
+        function renderRecent(data) {
+          var list = el('run-list');
+          list.textContent = '';
+          var rows = Array.isArray(data.recent_cycles) ? data.recent_cycles : [];
+          if (!rows.length) {
+            var empty = document.createElement('p');
+            empty.className = 'empty';
+            empty.textContent = 'No cycles in the data.';
+            list.appendChild(empty);
+            return;
+          }
+          rows.forEach(function (r) {
+            r = r || {};
+            var row = document.createElement('div');
+            row.className = 'run-row';
+
+            var cyc = document.createElement('span');
+            cyc.className = 'cyc';
+            cyc.textContent = '#' + str(r.cycle);
+            row.appendChild(cyc);
+            row.appendChild(document.createTextNode('  '));
+
+            var when = document.createElement('span');
+            when.className = 'when';
+            when.textContent = str(r.ts_local || r.ts_utc);
+            row.appendChild(when);
+            row.appendChild(document.createTextNode(' · '));
+
+            var ok = document.createElement('span');
+            ok.textContent = str(r.ok) + '/' + str(r.total) + ' OK';
+            row.appendChild(ok);
+
+            if (r.perimeter) {
+              row.appendChild(document.createTextNode(' · '));
+              var per = document.createElement('span');
+              per.className = 'run-perim ' + severityClass(r.perimeter.flags);
+              per.textContent =
+                'perimeter: ' + str(r.perimeter.reading) + ' ' + (flagsText(r.perimeter.flags) || '');
+              row.appendChild(per);
+            }
+
+            row.appendChild(document.createTextNode(' · '));
+            var tick = document.createElement('span');
+            tick.className = 'tick';
+            tick.textContent = 'tick ' + str(r.tick);
+            row.appendChild(tick);
+
+            list.appendChild(row);
+          });
+        }
+
+        function render(data) {
+          lastData = data;
+          el('data-error').hidden = true;
+          el('standing-box').hidden = false;
+          renderStanding(data);
+          el('last-updated').textContent =
+            'data generated ' + str(data.generated_at_local) +
+            ' (' + str(data.generated_at_utc) + ' UTC) · re-reads itself every 30 seconds';
+          renderMemory(data);
+          renderLatestCycle(data);
+          renderRecent(data);
+          el('mission-pre').textContent =
+            (data.mission === null || data.mission === undefined) ? '' : String(data.mission);
+          el('foundations-pre').textContent =
+            (data.foundations === null || data.foundations === undefined) ? '' : String(data.foundations);
+        }
+
+        function renderUnavailable() {
+          el('data-error').hidden = false;
+          el('st-status').textContent = 'DATA NOT AVAILABLE';
+          el('st-cycle').textContent = '';
+          el('st-last').textContent = '';
+          el('st-began').textContent = '';
+          var per = el('st-perimeter');
+          per.textContent = '';
+          per.className = 'line perimeter ok';
+          el('st-host').textContent = '';
+          el('st-units').textContent = '';
+          el('last-updated').textContent = '';
+          el('memory-list').textContent = '';
+          el('memory-toggle').hidden = true;
+          el('cycle-heading').textContent = 'Cycle — piece by piece';
+          el('components-body').textContent = '';
+          el('raw-summary').textContent = 'The raw log lines';
+          el('raw-pre').textContent = '';
+          el('run-list').textContent = '';
+          el('mission-pre').textContent = '';
+          el('foundations-pre').textContent = '';
+        }
+
+        function load() {
+          fetch('state.json', { cache: 'no-store' })
+            .then(function (r) {
+              if (!r.ok) throw new Error('state.json: ' + r.status);
+              return r.json();
+            })
+            .then(function (data) {
+              if (!data || typeof data !== 'object') throw new Error('state.json: not an object');
+              render(data);
+            })
+            .catch(function () {
+              renderUnavailable();
+            });
+        }
+
+        el('memory-toggle').addEventListener('click', function () {
+          showAllMemory = !showAllMemory;
+          if (lastData) renderMemory(lastData);
+        });
+
+        load();
+        setInterval(load, 30000);
+      })();
+    </script>
+
+    <script>
+      // Visit counter — Abacus (namespace: wizlawz-revenant-live)
+      fetch('https://abacus.jasoncameron.dev/hit/wizlawz-revenant-live/visits')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var elc = document.getElementById('visit-count');
+          if (elc) {
+            elc.textContent = (d && d.value !== undefined && d.value !== null)
+              ? Number(d.value).toLocaleString()
+              : '—';
+          }
+        })
+        .catch(function () {
+          var elc = document.getElementById('visit-count');
+          if (elc) elc.textContent = '—';
+        });
+    </script>
+  </body>
+</html>
