@@ -1,33 +1,33 @@
 {
- "generated_at_utc": "2026-11-17T15:40:51Z",
- "generated_at_local": "Tue, Nov 17, 2026, 9:40:51 AM CST",
+ "generated_at_utc": "2026-11-17T15:45:58Z",
+ "generated_at_local": "Tue, Nov 17, 2026, 9:45:58 AM CST",
  "standing": {
   "status": "STANDING",
-  "current_cycle": 1,
+  "current_cycle": 7,
   "components_ok": 13,
   "components_total": 13,
   "summary_status": "OK",
-  "tick": 245,
+  "tick": 251,
   "last_action": {
    "action": "respond",
    "status": "done"
   },
   "last_action_verified": true,
-  "last_cycle_utc": "2026-11-17T15:39:52Z",
-  "last_cycle_local": "Tue, Nov 17, 9:39 AM",
+  "last_cycle_utc": "2026-11-17T15:45:52Z",
+  "last_cycle_local": "Tue, Nov 17, 9:45 AM",
   "run_began_utc": "2026-11-17T15:39:52Z",
   "run_began_local": "Tue, Nov 17, 9:39 AM",
   "version_line": "VX376 STANDARD 3.1.0-STANDALONE-OS",
   "host": {
-   "load_1m": "1.33",
-   "mem_used_pct": "78.06",
-   "disk_used_pct": "0.56"
+   "load_1m": "0.43",
+   "mem_used_pct": "86.26",
+   "disk_used_pct": "0.62"
   },
   "perimeter": {
    "mode": "SIMULATION",
-   "reading": "CALM BASELINE",
+   "reading": "ROAD STEADY ROUGH",
    "flags": "['OK']",
-   "detail": "mode=SIMULATION reading=CALM BASELINE flags=['OK']"
+   "detail": "mode=SIMULATION reading=ROAD STEADY ROUGH flags=['OK']"
   }
  },
  "units": {
@@ -39,15 +39,15 @@
  },
  "fullstack_restarts": 0,
  "latest_cycle": {
-  "cycle": 1,
-  "ts_utc": "2026-11-17T15:39:52Z",
-  "ts_local": "Tue, Nov 17, 9:39 AM",
+  "cycle": 7,
+  "ts_utc": "2026-11-17T15:45:52Z",
+  "ts_local": "Tue, Nov 17, 9:45 AM",
   "components": [
    {
     "component": "state",
     "status": "OK",
-    "ms": 224,
-    "detail": "source=LiveHostSensors load_1m=1.33 mem_used_pct=78.06 disk_used_pct=0.56"
+    "ms": 217,
+    "detail": "source=LiveHostSensors load_1m=0.43 mem_used_pct=86.26 disk_used_pct=0.62"
    },
    {
     "component": "mission",
@@ -64,7 +64,7 @@
    {
     "component": "objective",
     "status": "OK",
-    "ms": 10,
+    "ms": 19,
     "detail": "OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory"
    },
    {
@@ -83,7 +83,7 @@
     "component": "perimeter",
     "status": "OK",
     "ms": 0,
-    "detail": "mode=SIMULATION reading=CALM BASELINE flags=['OK']"
+    "detail": "mode=SIMULATION reading=ROAD STEADY ROUGH flags=['OK']"
    },
    {
     "component": "mirror",
@@ -94,8 +94,8 @@
    {
     "component": "autonomy",
     "status": "OK",
-    "ms": 221,
-    "detail": "tick=245 action=respond status=done check_passed=True"
+    "ms": 210,
+    "detail": "tick=251 action=respond status=done check_passed=True"
    },
    {
     "component": "learning",
@@ -112,7 +112,7 @@
    {
     "component": "roads",
     "status": "OK",
-    "ms": 26,
+    "ms": 24,
     "detail": "check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active"
    },
    {
@@ -124,28 +124,118 @@
    {
     "component": "cycle_summary",
     "status": "OK",
-    "ms": 599,
+    "ms": 586,
     "detail": "13/13 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
    }
   ],
   "raw": [
-   "cycle=1 component=state status=OK ms=224 detail=source=LiveHostSensors load_1m=1.33 mem_used_pct=78.06 disk_used_pct=0.56",
-   "cycle=1 component=mission status=OK ms=0 detail=MISSION held: 2026-11-17 directive (standing orders, unaltered)",
-   "cycle=1 component=foundations status=OK ms=0 detail=FOUNDATIONS held: T.H.E.R.E. — Through Honesty Each Reality Expands (her own philosophies, unaltered)",
-   "cycle=1 component=objective status=OK ms=10 detail=OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory",
-   "cycle=1 component=kernel status=OK ms=115 detail=status=CLEAR verified=True proof=None action=None decision=NO_ACTION_REQUESTED offerings=1 (OFFERED, never facts)",
-   "cycle=1 component=codex status=OK ms=0 detail=letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True",
-   "cycle=1 component=perimeter status=OK ms=0 detail=mode=SIMULATION reading=CALM BASELINE flags=['OK']",
-   "cycle=1 component=mirror status=OK ms=0 detail=path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]",
-   "cycle=1 component=autonomy status=OK ms=221 detail=tick=245 action=respond status=done check_passed=True",
-   "cycle=1 component=learning status=OK ms=1 detail=probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl",
-   "cycle=1 component=self_repair status=OK ms=0 detail=no detection gap found — nothing proposed",
-   "cycle=1 component=roads status=OK ms=26 detail=check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active",
-   "cycle=1 component=telnet_gateway status=OK ms=0 detail=listening 127.0.0.1:2323 LOCAL-ONLY",
-   "cycle=1 component=cycle_summary status=OK ms=599 detail=13/13 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
+   "cycle=7 component=state status=OK ms=217 detail=source=LiveHostSensors load_1m=0.43 mem_used_pct=86.26 disk_used_pct=0.62",
+   "cycle=7 component=mission status=OK ms=0 detail=MISSION held: 2026-11-17 directive (standing orders, unaltered)",
+   "cycle=7 component=foundations status=OK ms=0 detail=FOUNDATIONS held: T.H.E.R.E. — Through Honesty Each Reality Expands (her own philosophies, unaltered)",
+   "cycle=7 component=objective status=OK ms=19 detail=OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory",
+   "cycle=7 component=kernel status=OK ms=115 detail=status=CLEAR verified=True proof=None action=None decision=NO_ACTION_REQUESTED offerings=1 (OFFERED, never facts)",
+   "cycle=7 component=codex status=OK ms=0 detail=letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True",
+   "cycle=7 component=perimeter status=OK ms=0 detail=mode=SIMULATION reading=ROAD STEADY ROUGH flags=['OK']",
+   "cycle=7 component=mirror status=OK ms=0 detail=path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]",
+   "cycle=7 component=autonomy status=OK ms=210 detail=tick=251 action=respond status=done check_passed=True",
+   "cycle=7 component=learning status=OK ms=1 detail=probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl",
+   "cycle=7 component=self_repair status=OK ms=0 detail=no detection gap found — nothing proposed",
+   "cycle=7 component=roads status=OK ms=24 detail=check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active",
+   "cycle=7 component=telnet_gateway status=OK ms=0 detail=listening 127.0.0.1:2323 LOCAL-ONLY",
+   "cycle=7 component=cycle_summary status=OK ms=586 detail=13/13 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
   ]
  },
  "recent_cycles": [
+  {
+   "cycle": 7,
+   "ts_utc": "2026-11-17T15:45:52Z",
+   "ts_local": "Tue, Nov 17, 9:45 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "ROAD STEADY ROUGH",
+    "flags": "['OK']",
+    "detail": "mode=SIMULATION reading=ROAD STEADY ROUGH flags=['OK']"
+   },
+   "tick": 251
+  },
+  {
+   "cycle": 6,
+   "ts_utc": "2026-11-17T15:44:52Z",
+   "ts_local": "Tue, Nov 17, 9:44 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "ROAD CHANGE",
+    "flags": "['PERIMETER ALERT']",
+    "detail": "mode=SIMULATION reading=ROAD CHANGE flags=['PERIMETER ALERT']"
+   },
+   "tick": 250
+  },
+  {
+   "cycle": 5,
+   "ts_utc": "2026-11-17T15:43:52Z",
+   "ts_local": "Tue, Nov 17, 9:43 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "MOTION + SOUND TOGETHER",
+    "flags": "['PERIMETER ALERT']",
+    "detail": "mode=SIMULATION reading=MOTION + SOUND TOGETHER flags=['PERIMETER ALERT']"
+   },
+   "tick": 249
+  },
+  {
+   "cycle": 4,
+   "ts_utc": "2026-11-17T15:42:52Z",
+   "ts_local": "Tue, Nov 17, 9:42 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "LOUD SOUND ALONE",
+    "flags": "['WARNING']",
+    "detail": "mode=SIMULATION reading=LOUD SOUND ALONE flags=['WARNING']"
+   },
+   "tick": 248
+  },
+  {
+   "cycle": 3,
+   "ts_utc": "2026-11-17T15:41:52Z",
+   "ts_local": "Tue, Nov 17, 9:41 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "MOTION SPIKE ALONE",
+    "flags": "['WARNING']",
+    "detail": "mode=SIMULATION reading=MOTION SPIKE ALONE flags=['WARNING']"
+   },
+   "tick": 247
+  },
+  {
+   "cycle": 2,
+   "ts_utc": "2026-11-17T15:40:52Z",
+   "ts_local": "Tue, Nov 17, 9:40 AM",
+   "ok": 13,
+   "total": 13,
+   "summary_status": "OK",
+   "perimeter": {
+    "mode": "SIMULATION",
+    "reading": "GENTLE APPROACH",
+    "flags": "['OK']",
+    "detail": "mode=SIMULATION reading=GENTLE APPROACH flags=['OK']"
+   },
+   "tick": 246
+  },
   {
    "cycle": 1,
    "ts_utc": "2026-11-17T15:39:52Z",
@@ -163,6 +253,486 @@
   }
  ],
  "memory_records": [
+  {
+   "ts": "2026-11-17T15:45:52.654695+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 7: cycle_ms_so_far=561; baseline_ms=949; delta_pct=-40.9; slowest=state streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.654468+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 7: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.654329+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 7: elapsed_so_far_ms=561; slowest component so far state (217ms); components timed: {'state': 217, 'mission': 0, 'foundations': 0, 'objective': 19, 'kernel': 115, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 210}"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.654250+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 7: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.653357+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 251: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.651680+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.651518+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:45:52.443767+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 7. Host state: load_1m=0.43, mem_used_pct=86.26, disk_used_pct=0.62. Perimeter sensors: motion 0.5g, sound 55 dB, vibration 0.87, distance 250 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: vibration steady, no further change"
+  },
+  {
+   "ts": "2026-11-17T15:45:52.317712+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 7: objective worked — outbox letter refreshed (tick 250); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.668225+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 6: cycle_ms_so_far=575; baseline_ms=949; delta_pct=-39.4; slowest=kernel streak=2; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.668017+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 6: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.667922+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 6: elapsed_so_far_ms=575; slowest component so far kernel (236ms); components timed: {'state': 134, 'mission': 3, 'foundations': 0, 'objective': 1, 'kernel': 236, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 200}"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.667840+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 6: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.667053+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 250: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.665753+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.665577+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:44:52.467254+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 6. Host state: load_1m=0.66, mem_used_pct=84.82, disk_used_pct=0.61. Perimeter sensors: motion 0.5g, sound 55 dB, vibration 0.85, distance 150 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: vibration changed sharply over distance"
+  },
+  {
+   "ts": "2026-11-17T15:44:52.230450+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 6: objective worked — outbox letter refreshed (tick 249); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.662534+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 5: cycle_ms_so_far=570; baseline_ms=949; delta_pct=-39.9; slowest=kernel streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.662325+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 5: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.662229+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 5: elapsed_so_far_ms=570; slowest component so far kernel (215ms); components timed: {'state': 130, 'mission': 0, 'foundations': 0, 'objective': 6, 'kernel': 215, 'codex': 5, 'perimeter': 0, 'mirror': 0, 'autonomy': 214}"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.662160+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 5: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.661426+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 249: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.660107+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.659919+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:43:52.448054+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 5. Host state: load_1m=1.07, mem_used_pct=82.71, disk_used_pct=0.61. Perimeter sensors: motion 3.1g, sound 95 dB, vibration 0.4, distance 80 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: sudden jolt and loud sound together"
+  },
+  {
+   "ts": "2026-11-17T15:43:52.223137+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 5: objective worked — outbox letter refreshed (tick 248); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.755978+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 4: cycle_ms_so_far=663; baseline_ms=1004; delta_pct=-34.0; slowest=state streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.755763+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 4: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.755672+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 4: elapsed_so_far_ms=663; slowest component so far state (261ms); components timed: {'state': 261, 'mission': 0, 'foundations': 0, 'objective': 1, 'kernel': 159, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 242}"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.755608+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 4: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.754839+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 248: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.753205+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.753012+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:42:52.513158+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 4. Host state: load_1m=0.98, mem_used_pct=80.88, disk_used_pct=0.6. Perimeter sensors: motion 0.3g, sound 92 dB, vibration 0.33, distance 70 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: sharp loud sound, no sudden motion"
+  },
+  {
+   "ts": "2026-11-17T15:42:52.354005+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 4: objective worked — outbox letter refreshed (tick 247); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.877719+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 3: cycle_ms_so_far=785; baseline_ms=1004; delta_pct=-21.8; slowest=kernel streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.877533+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 3: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.877435+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 3: elapsed_so_far_ms=785; slowest component so far kernel (335ms); components timed: {'state': 229, 'mission': 0, 'foundations': 0, 'objective': 3, 'kernel': 335, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 217}"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.877335+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 3: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.876673+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 247: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.875417+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.875257+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:41:52.659944+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 3. Host state: load_1m=1.87, mem_used_pct=78.45, disk_used_pct=0.59. Perimeter sensors: motion 2.8g, sound 50 dB, vibration 0.35, distance 60 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: sudden jolt, no loud sound"
+  },
+  {
+   "ts": "2026-11-17T15:41:52.322275+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 3: objective worked — outbox letter refreshed (tick 246); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.653975+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 2: cycle_ms_so_far=561; baseline_ms=1045; delta_pct=-46.3; slowest=autonomy streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.653777+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 2: standing probes 5/5; extended probes 2/2; detection patterns known 13"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.653660+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 2: elapsed_so_far_ms=561; slowest component so far autonomy (227ms); components timed: {'state': 214, 'mission': 0, 'foundations': 0, 'objective': 1, 'kernel': 118, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 227}"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.653586+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 2: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.652842+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 246: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.651596+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.651431+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-17T15:40:52.425689+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 2. Host state: load_1m=1.21, mem_used_pct=81.4, disk_used_pct=0.58. Perimeter sensors: motion 0.4g, sound 55 dB, vibration 0.32, distance 50 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: someone approaching calmly"
+  },
+  {
+   "ts": "2026-11-17T15:40:52.307362+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 2: objective worked — outbox letter refreshed (tick 245); standing objective held unaltered"
+  },
   {
    "ts": "2026-11-17T15:39:52.664428+00:00",
    "kind": "efficiency_result",
@@ -210,486 +780,6 @@
   },
   {
    "ts": "2026-11-17T15:39:52.661811+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:39:52.661666+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:39:52.442526+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 1. Host state: load_1m=1.33, mem_used_pct=78.06, disk_used_pct=0.56. Perimeter sensors: motion 0.1g, sound 40 dB, vibration 0.3, distance 0 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: calm, device at rest"
-  },
-  {
-   "ts": "2026-11-17T15:39:52.324227+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 1: objective worked — outbox letter refreshed (tick 244); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.164008+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 31: cycle_ms_so_far=918; baseline_ms=1048; delta_pct=-12.4; slowest=kernel streak=11; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.163748+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 31: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.163594+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 31: elapsed_so_far_ms=918; slowest component so far kernel (509ms); components timed: {'state': 110, 'mission': 4, 'foundations': 2, 'objective': 5, 'kernel': 509, 'codex': 6, 'perimeter': 0, 'mirror': 0, 'autonomy': 281}"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.163493+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 31: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.162615+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 244: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.161231+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:37:35.161051+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:37:34.882108+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 31. Host state: load_1m=0.95, mem_used_pct=93.44, disk_used_pct=1.05. Perimeter sensors: motion 0.1g, sound 40 dB, vibration 0.3, distance 0 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: calm, device at rest"
-  },
-  {
-   "ts": "2026-11-17T15:37:34.365289+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 31: objective worked — outbox letter refreshed (tick 243); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.505868+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 30: cycle_ms_so_far=1260; baseline_ms=1046; delta_pct=20.5; slowest=kernel streak=10; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.505576+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 30: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.505424+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 30: elapsed_so_far_ms=1260; slowest component so far kernel (743ms); components timed: {'state': 217, 'mission': 4, 'foundations': 3, 'objective': 9, 'kernel': 743, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 282}"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.505338+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 30: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.504483+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 243: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.503058+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:36:35.502908+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:36:35.222437+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 30. Host state: load_1m=0.67, mem_used_pct=92.66, disk_used_pct=1.04. Perimeter sensors: motion 0.3g, sound 42 dB, vibration 0.5, distance 350 ft, light 450 lux, temperature 17.0 C, pressure 1007.0 hPa. Note: conditions easing gradually"
-  },
-  {
-   "ts": "2026-11-17T15:36:34.472697+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 30: objective worked — outbox letter refreshed (tick 242); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.336365+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 29: cycle_ms_so_far=1091; baseline_ms=1045; delta_pct=4.4; slowest=kernel streak=9; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.336166+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 29: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.336048+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 29: elapsed_so_far_ms=1091; slowest component so far kernel (629ms); components timed: {'state': 203, 'mission': 3, 'foundations': 4, 'objective': 11, 'kernel': 629, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 240}"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.335952+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 29: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.335305+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 242: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.334045+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:35:35.333853+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:35:35.095225+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 29. Host state: load_1m=1.18, mem_used_pct=91.07, disk_used_pct=1.04. Perimeter sensors: motion 0.1g, sound 38 dB, vibration 0.85, distance 270 ft, light 280 lux, temperature 14.0 C, pressure 1004.0 hPa. Note: motion and sound settled, readings steady"
-  },
-  {
-   "ts": "2026-11-17T15:35:34.460238+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 29: objective worked — outbox letter refreshed (tick 241); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.616151+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 28: cycle_ms_so_far=1371; baseline_ms=1004; delta_pct=36.6; slowest=kernel streak=8; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.615944+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 28: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.615845+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 28: elapsed_so_far_ms=1371; slowest component so far kernel (667ms); components timed: {'state': 410, 'mission': 2, 'foundations': 0, 'objective': 7, 'kernel': 667, 'codex': 6, 'perimeter': 0, 'mirror': 0, 'autonomy': 277}"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.615743+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 28: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.615002+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 241: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.613532+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:34:35.613373+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:34:35.338037+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 28. Host state: load_1m=1.05, mem_used_pct=91.14, disk_used_pct=1.03. Perimeter sensors: motion 0.2g, sound 45 dB, vibration 0.86, distance 260 ft, light 300 lux, temperature 15.0 C, pressure 1005.0 hPa. Note: light, temperature, and pressure all dropping"
-  },
-  {
-   "ts": "2026-11-17T15:34:34.660319+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 28: objective worked — outbox letter refreshed (tick 240); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.398747+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 27: cycle_ms_so_far=1153; baseline_ms=949; delta_pct=21.5; slowest=kernel streak=7; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.398477+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 27: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.398365+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 27: elapsed_so_far_ms=1153; slowest component so far kernel (629ms); components timed: {'state': 274, 'mission': 7, 'foundations': 3, 'objective': 15, 'kernel': 629, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 224}"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.398289+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 27: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.397348+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 240: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.395704+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-17T15:33:35.395480+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-17T15:33:35.173936+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 27. Host state: load_1m=0.93, mem_used_pct=91.74, disk_used_pct=1.02. Perimeter sensors: motion 0.5g, sound 55 dB, vibration 0.87, distance 250 ft, light 800 lux, temperature 21.0 C, pressure 1013.0 hPa. Note: vibration steady, no further change"
-  },
-  {
-   "ts": "2026-11-17T15:33:34.540503+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 27: objective worked — outbox letter refreshed (tick 239); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.114941+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 26: cycle_ms_so_far=870; baseline_ms=1004; delta_pct=-13.3; slowest=kernel streak=6; flag=kernel"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.114738+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 26: standing probes 5/5; extended probes 2/2; detection patterns known 13"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.114602+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 26: elapsed_so_far_ms=870; slowest component so far kernel (516ms); components timed: {'state': 124, 'mission': 4, 'foundations': 3, 'objective': 9, 'kernel': 516, 'codex': 0, 'perimeter': 0, 'mirror': 0, 'autonomy': 213}"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.114511+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 26: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.113636+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 239: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-17T15:32:35.111950+00:00",
    "kind": "check",
    "tags": [
     "check",
