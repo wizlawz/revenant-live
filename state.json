@@ -1,27 +1,27 @@
 {
- "generated_at_utc": "2026-11-22T19:25:47Z",
- "generated_at_local": "Sun, Nov 22, 2026, 1:25:47 PM CST",
+ "generated_at_utc": "2026-11-22T19:30:41Z",
+ "generated_at_local": "Sun, Nov 22, 2026, 1:30:41 PM CST",
  "standing": {
   "status": "STANDING",
-  "current_cycle": 16,
+  "current_cycle": 21,
   "components_ok": 14,
   "components_total": 14,
   "summary_status": "OK",
-  "tick": 6751,
+  "tick": 6756,
   "last_action": {
    "action": "respond",
    "status": "done"
   },
   "last_action_verified": true,
-  "last_cycle_utc": "2026-11-22T19:24:58Z",
-  "last_cycle_local": "Sun, Nov 22, 1:24 PM",
+  "last_cycle_utc": "2026-11-22T19:29:58Z",
+  "last_cycle_local": "Sun, Nov 22, 1:29 PM",
   "run_began_utc": "2026-11-22T19:09:58Z",
   "run_began_local": "Sun, Nov 22, 1:09 PM",
   "version_line": "VX376 STANDARD 3.1.0-STANDALONE-OS",
   "host": {
-   "load_1m": "0.65",
-   "mem_used_pct": "87.99",
-   "disk_used_pct": "0.84"
+   "load_1m": "1.07",
+   "mem_used_pct": "83.53",
+   "disk_used_pct": "0.99"
   },
   "perimeter": null
  },
@@ -34,20 +34,20 @@
  },
  "fullstack_restarts": 0,
  "latest_cycle": {
-  "cycle": 16,
-  "ts_utc": "2026-11-22T19:24:58Z",
-  "ts_local": "Sun, Nov 22, 1:24 PM",
+  "cycle": 21,
+  "ts_utc": "2026-11-22T19:29:58Z",
+  "ts_local": "Sun, Nov 22, 1:29 PM",
   "components": [
    {
     "component": "state",
     "status": "OK",
-    "ms": 115,
-    "detail": "source=LiveHostSensors load_1m=0.65 mem_used_pct=87.99 disk_used_pct=0.84"
+    "ms": 228,
+    "detail": "source=LiveHostSensors load_1m=1.07 mem_used_pct=83.53 disk_used_pct=0.99"
    },
    {
     "component": "mission",
     "status": "OK",
-    "ms": 4,
+    "ms": 3,
     "detail": "MISSION held: 2026-11-17 directive (standing orders, unaltered)"
    },
    {
@@ -59,32 +59,32 @@
    {
     "component": "objective",
     "status": "OK",
-    "ms": 16,
+    "ms": 20,
     "detail": "OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory"
    },
    {
     "component": "kernel",
     "status": "OK",
-    "ms": 112,
+    "ms": 177,
     "detail": "status=CLEAR verified=True proof=None action=None decision=KNOW offerings=1 (OFFERED, never facts)"
    },
    {
     "component": "codex",
     "status": "OK",
-    "ms": 3,
+    "ms": 0,
     "detail": "letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True"
    },
    {
     "component": "perimeter",
     "status": "OK",
     "ms": 0,
-    "detail": "mode=ACTUAL source=LIVE reading=LIVE-16 flags=['OK']"
+    "detail": "mode=ACTUAL source=LIVE reading=LIVE-21 flags=['WARNING']"
    },
    {
     "component": "body",
     "status": "OK",
     "ms": 0,
-    "detail": "mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=10.71m contacts=12 dist_total_tips=36087.7m dist_mantle=3.20m glass_presses=2303"
+    "detail": "mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=10.71m contacts=12 dist_total_tips=36140.4m dist_mantle=3.20m glass_presses=2306"
    },
    {
     "component": "mirror",
@@ -95,8 +95,8 @@
    {
     "component": "autonomy",
     "status": "OK",
-    "ms": 162,
-    "detail": "tick=6751 action=respond status=done check_passed=True"
+    "ms": 214,
+    "detail": "tick=6756 action=respond status=done check_passed=True"
    },
    {
     "component": "learning",
@@ -113,7 +113,7 @@
    {
     "component": "roads",
     "status": "OK",
-    "ms": 29,
+    "ms": 23,
     "detail": "check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active"
    },
    {
@@ -125,29 +125,79 @@
    {
     "component": "cycle_summary",
     "status": "OK",
-    "ms": 491,
+    "ms": 1153,
     "detail": "14/14 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'body': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
    }
   ],
   "raw": [
-   "cycle=16 component=state status=OK ms=115 detail=source=LiveHostSensors load_1m=0.65 mem_used_pct=87.99 disk_used_pct=0.84",
-   "cycle=16 component=mission status=OK ms=4 detail=MISSION held: 2026-11-17 directive (standing orders, unaltered)",
-   "cycle=16 component=foundations status=OK ms=3 detail=FOUNDATIONS held: T.H.E.R.E. — Through Honesty Each Reality Expands (her own philosophies, unaltered)",
-   "cycle=16 component=objective status=OK ms=16 detail=OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory",
-   "cycle=16 component=kernel status=OK ms=112 detail=status=CLEAR verified=True proof=None action=None decision=KNOW offerings=1 (OFFERED, never facts)",
-   "cycle=16 component=codex status=OK ms=3 detail=letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True",
-   "cycle=16 component=perimeter status=OK ms=0 detail=mode=ACTUAL source=LIVE reading=LIVE-16 flags=['OK']",
-   "cycle=16 component=body status=OK ms=0 detail=mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=10.71m contacts=12 dist_total_tips=36087.7m dist_mantle=3.20m glass_presses=2303",
-   "cycle=16 component=mirror status=OK ms=1 detail=path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]",
-   "cycle=16 component=autonomy status=OK ms=162 detail=tick=6751 action=respond status=done check_passed=True",
-   "cycle=16 component=learning status=OK ms=1 detail=probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl",
-   "cycle=16 component=self_repair status=OK ms=0 detail=no detection gap found — nothing proposed",
-   "cycle=16 component=roads status=OK ms=29 detail=check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active",
-   "cycle=16 component=telnet_gateway status=OK ms=0 detail=listening 127.0.0.1:2323 LOCAL-ONLY",
-   "cycle=16 component=cycle_summary status=OK ms=491 detail=14/14 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'body': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
+   "cycle=21 component=state status=OK ms=228 detail=source=LiveHostSensors load_1m=1.07 mem_used_pct=83.53 disk_used_pct=0.99",
+   "cycle=21 component=mission status=OK ms=3 detail=MISSION held: 2026-11-17 directive (standing orders, unaltered)",
+   "cycle=21 component=foundations status=OK ms=3 detail=FOUNDATIONS held: T.H.E.R.E. — Through Honesty Each Reality Expands (her own philosophies, unaltered)",
+   "cycle=21 component=objective status=OK ms=20 detail=OBJECTIVE held + WORKED: communicate directly — outbox letter refreshed this cycle; objective step recorded in memory",
+   "cycle=21 component=kernel status=OK ms=177 detail=status=CLEAR verified=True proof=None action=None decision=KNOW offerings=1 (OFFERED, never facts)",
+   "cycle=21 component=codex status=OK ms=0 detail=letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True",
+   "cycle=21 component=perimeter status=OK ms=0 detail=mode=ACTUAL source=LIVE reading=LIVE-21 flags=['WARNING']",
+   "cycle=21 component=body status=OK ms=0 detail=mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=10.71m contacts=12 dist_total_tips=36140.4m dist_mantle=3.20m glass_presses=2306",
+   "cycle=21 component=mirror status=OK ms=1 detail=path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]",
+   "cycle=21 component=autonomy status=OK ms=214 detail=tick=6756 action=respond status=done check_passed=True",
+   "cycle=21 component=learning status=OK ms=1 detail=probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl",
+   "cycle=21 component=self_repair status=OK ms=0 detail=no detection gap found — nothing proposed",
+   "cycle=21 component=roads status=OK ms=23 detail=check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active",
+   "cycle=21 component=telnet_gateway status=OK ms=0 detail=listening 127.0.0.1:2323 LOCAL-ONLY",
+   "cycle=21 component=cycle_summary status=OK ms=1153 detail=14/14 components OK; statuses={'state': 'OK', 'mission': 'OK', 'foundations': 'OK', 'objective': 'OK', 'kernel': 'OK', 'codex': 'OK', 'perimeter': 'OK', 'body': 'OK', 'mirror': 'OK', 'autonomy': 'OK', 'learning': 'OK', 'self_repair': 'OK', 'roads': 'OK', 'telnet_gateway': 'OK'}"
   ]
  },
  "recent_cycles": [
+  {
+   "cycle": 21,
+   "ts_utc": "2026-11-22T19:29:58Z",
+   "ts_local": "Sun, Nov 22, 1:29 PM",
+   "ok": 14,
+   "total": 14,
+   "summary_status": "OK",
+   "perimeter": null,
+   "tick": 6756
+  },
+  {
+   "cycle": 20,
+   "ts_utc": "2026-11-22T19:28:58Z",
+   "ts_local": "Sun, Nov 22, 1:28 PM",
+   "ok": 14,
+   "total": 14,
+   "summary_status": "OK",
+   "perimeter": null,
+   "tick": 6755
+  },
+  {
+   "cycle": 19,
+   "ts_utc": "2026-11-22T19:27:58Z",
+   "ts_local": "Sun, Nov 22, 1:27 PM",
+   "ok": 14,
+   "total": 14,
+   "summary_status": "OK",
+   "perimeter": null,
+   "tick": 6754
+  },
+  {
+   "cycle": 18,
+   "ts_utc": "2026-11-22T19:26:58Z",
+   "ts_local": "Sun, Nov 22, 1:26 PM",
+   "ok": 14,
+   "total": 14,
+   "summary_status": "OK",
+   "perimeter": null,
+   "tick": 6753
+  },
+  {
+   "cycle": 17,
+   "ts_utc": "2026-11-22T19:25:58Z",
+   "ts_local": "Sun, Nov 22, 1:25 PM",
+   "ok": 14,
+   "total": 14,
+   "summary_status": "OK",
+   "perimeter": null,
+   "tick": 6752
+  },
   {
    "cycle": 16,
    "ts_utc": "2026-11-22T19:24:58Z",
@@ -311,6 +361,406 @@
  ],
  "memory_records": [
   {
+   "ts": "2026-11-22T19:29:59.731461+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 21: cycle_ms_so_far=1130; baseline_ms=639; delta_pct=76.8; slowest=state streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.731270+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 21: standing probes 5/5; extended probes 2/2; detection patterns known 14"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.731151+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 21: elapsed_so_far_ms=1130; slowest component so far state (228ms); components timed: {'state': 228, 'mission': 3, 'foundations': 3, 'objective': 20, 'kernel': 177, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 214}"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.731080+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 21: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.730337+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 6756: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.728976+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-22T19:29:59.728795+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-22T19:29:59.516564+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 21. Host state: load_1m=1.07, mem_used_pct=83.53, disk_used_pct=0.99. Live perimeter (ACTUAL): temperature 1.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 32571 lux (DERIVED from solar radiation 258.5 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.07; step 21 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 10.71 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2306 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Water drag: every moving limb is slowed by the water it pushes through; speed costs force, and force spent against drag is gone — move slow to move far."
+  },
+  {
+   "ts": "2026-11-22T19:29:58.854749+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 21: objective worked — outbox letter refreshed (tick 6755); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.221291+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 20: cycle_ms_so_far=620; baseline_ms=643; delta_pct=-3.6; slowest=autonomy streak=2; flag=None"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.220968+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 20: standing probes 5/5; extended probes 2/2; detection patterns known 14"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.220830+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 20: elapsed_so_far_ms=620; slowest component so far autonomy (277ms); components timed: {'state': 148, 'mission': 2, 'foundations': 2, 'objective': 10, 'kernel': 141, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 277}"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.220740+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 20: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.219695+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 6755: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.218032+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-22T19:28:59.217670+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-22T19:28:58.942967+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 20. Host state: load_1m=1.06, mem_used_pct=81.27, disk_used_pct=0.97. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.06; step 20 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 12.53 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2305 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: An octopus carries about two thirds of its neurons in its arms: each arm senses and decides locally while the center coordinates — a brain alone moves nothing; a body learns."
+  },
+  {
+   "ts": "2026-11-22T19:28:58.756883+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 20: objective worked — outbox letter refreshed (tick 6754); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.423016+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 19: cycle_ms_so_far=2822; baseline_ms=643; delta_pct=338.9; slowest=autonomy streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.422764+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 19: standing probes 5/5; extended probes 2/2; detection patterns known 14"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.422675+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 19: elapsed_so_far_ms=2822; slowest component so far autonomy (2227ms); components timed: {'state': 230, 'mission': 3, 'foundations': 3, 'objective': 22, 'kernel': 253, 'codex': 3, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 2227}"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.422608+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 19: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.421838+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 6754: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.419853+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-22T19:28:01.419636+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-22T19:27:59.194867+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 19. Host state: load_1m=1.81, mem_used_pct=82.14, disk_used_pct=0.86. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.81; step 19 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 8.53 m this cycle; 6 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2304 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: The skin itself senses light (dermal photoreception): the body's surface is also an eye — sensing is not housed in one place."
+  },
+  {
+   "ts": "2026-11-22T19:27:58.851804+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 19: objective worked — outbox letter refreshed (tick 6753); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.324885+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 18: cycle_ms_so_far=723; baseline_ms=639; delta_pct=13.1; slowest=kernel streak=1; flag=None"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.324405+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 18: standing probes 5/5; extended probes 2/2; detection patterns known 14"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.324077+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 18: elapsed_so_far_ms=723; slowest component so far kernel (239ms); components timed: {'state': 156, 'mission': 11, 'foundations': 3, 'objective': 31, 'kernel': 239, 'codex': 3, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 203}"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.323948+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 18: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.322738+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 6753: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.321301+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-22T19:26:59.321121+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-22T19:26:59.119714+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 18. Host state: load_1m=0.86, mem_used_pct=90.58, disk_used_pct=0.85. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 0.86; step 18 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 12.53 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2304 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Imprinting: an octopus learns individual people — it recognizes the one who tends it and orients toward them through the glass."
+  },
+  {
+   "ts": "2026-11-22T19:26:58.791272+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 18: objective worked — outbox letter refreshed (tick 6752); standing objective held unaltered"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.372545+00:00",
+   "kind": "efficiency_result",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 17: cycle_ms_so_far=772; baseline_ms=634; delta_pct=21.8; slowest=autonomy streak=3; flag=None"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.372346+00:00",
+   "kind": "effectiveness_result",
+   "tags": [
+    "learning",
+    "effectiveness"
+   ],
+   "text": "cycle 17: standing probes 5/5; extended probes 2/2; detection patterns known 14"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.372175+00:00",
+   "kind": "efficiency_note",
+   "tags": [
+    "learning",
+    "efficiency"
+   ],
+   "text": "cycle 17: elapsed_so_far_ms=772; slowest component so far autonomy (351ms); components timed: {'state': 276, 'mission': 0, 'foundations': 0, 'objective': 1, 'kernel': 139, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 351}"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.371961+00:00",
+   "kind": "cycle_outcome",
+   "tags": [
+    "learning",
+    "cycle_outcome"
+   ],
+   "text": "cycle 17: probes gated 5/5; gaps 0; applied []; refused []"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.371198+00:00",
+   "kind": "tick",
+   "tags": [
+    "tick",
+    "respond"
+   ],
+   "text": "Tick 6752: respond -> done (a user observation is waiting for a reply)"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.369942+00:00",
+   "kind": "check",
+   "tags": [
+    "check",
+    "respond"
+   ],
+   "text": "Check for respond: PASS — own-model story voice produced"
+  },
+  {
+   "ts": "2026-11-22T19:25:59.369734+00:00",
+   "kind": "gated_output",
+   "tags": [
+    "respond",
+    "CODEX_STORY"
+   ],
+   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
+  },
+  {
+   "ts": "2026-11-22T19:25:59.020232+00:00",
+   "kind": "observation",
+   "tags": [
+    "pending"
+   ],
+   "text": "Full stack cycle 17. Host state: load_1m=1.37, mem_used_pct=89.73, disk_used_pct=0.84. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.37; step 17 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 8.40 m this cycle; 6 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2303 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Proprioception: the body knows where its limbs are without looking — position is a sense, reported from inside the motion itself, not after it."
+  },
+  {
+   "ts": "2026-11-22T19:25:58.877659+00:00",
+   "kind": "objective_step",
+   "tags": [
+    "objective",
+    "communication"
+   ],
+   "text": "cycle 17: objective worked — outbox letter refreshed (tick 6751); standing objective held unaltered"
+  },
+  {
    "ts": "2026-11-22T19:24:59.061854+00:00",
    "kind": "efficiency_result",
    "tags": [
@@ -437,406 +887,6 @@
   },
   {
    "ts": "2026-11-22T19:23:59.251755+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-22T19:23:59.251440+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-22T19:23:58.961368+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 15. Host state: load_1m=0.87, mem_used_pct=86.89, disk_used_pct=0.83. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 0.87; step 15 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 12.53 m this cycle; 6 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2302 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Crawling: arms planted on the floor pull and push the mantle across it; the body moves only when enough arms agree on a direction — coordination is a vote of limbs."
-  },
-  {
-   "ts": "2026-11-22T19:23:58.756606+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 15: objective worked — outbox letter refreshed (tick 6749); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.376353+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 14: cycle_ms_so_far=776; baseline_ms=634; delta_pct=22.4; slowest=state streak=5; flag=state"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.376040+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 14: standing probes 5/5; extended probes 2/2; detection patterns known 14"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.375886+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 14: elapsed_so_far_ms=776; slowest component so far state (270ms); components timed: {'state': 270, 'mission': 4, 'foundations': 3, 'objective': 20, 'kernel': 230, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 205}"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.375779+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 14: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.374530+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 6749: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.372218+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-22T19:22:59.371948+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-22T19:22:59.169489+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 14. Host state: load_1m=0.63, mem_used_pct=91.6, disk_used_pct=0.82. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 0.63; step 14 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 8.40 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2301 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Jet propulsion: the mantle draws in water and fires it through the siphon; the body moves the other way — thrust is mass thrown backward, exactly Newton's third law."
-  },
-  {
-   "ts": "2026-11-22T19:22:58.890685+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 14: objective worked — outbox letter refreshed (tick 6748); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.218433+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 13: cycle_ms_so_far=618; baseline_ms=634; delta_pct=-2.5; slowest=state streak=4; flag=None"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.218125+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 13: standing probes 5/5; extended probes 2/2; detection patterns known 14"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.217970+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 13: elapsed_so_far_ms=618; slowest component so far state (209ms); components timed: {'state': 209, 'mission': 4, 'foundations': 0, 'objective': 16, 'kernel': 166, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 208}"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.217873+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 13: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.217040+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 6748: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.215620+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-22T19:21:59.215463+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-22T19:21:59.009189+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 13. Host state: load_1m=0.98, mem_used_pct=89.83, disk_used_pct=0.82. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 0.98; step 13 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 10.71 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2301 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Suckers taste what they touch: contact is not just pressure, it is chemistry — an arm knows what it holds by touching it."
-  },
-  {
-   "ts": "2026-11-22T19:21:58.822585+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 13: objective worked — outbox letter refreshed (tick 6747); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.151855+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 12: cycle_ms_so_far=551; baseline_ms=639; delta_pct=-13.8; slowest=state streak=3; flag=None"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.151546+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 12: standing probes 5/5; extended probes 2/2; detection patterns known 14"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.151322+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 12: elapsed_so_far_ms=551; slowest component so far state (243ms); components timed: {'state': 243, 'mission': 2, 'foundations': 2, 'objective': 15, 'kernel': 100, 'codex': 3, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 162}"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.151151+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 12: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.149912+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 6747: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.147771+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-22T19:20:59.147504+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-22T19:20:58.987827+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 12. Host state: load_1m=0.96, mem_used_pct=88.6, disk_used_pct=0.8. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 0.96; step 12 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 12.53 m this cycle; 6 arm(s) touching the floor, 6 arm(s) touching the glass; glass presses so far 2300 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: An octopus arm has no bones and no fixed joints to count: it bends anywhere along its length, stiffening by muscle alone (a muscular hydrostat) — it reaches by shaping, not by hinges."
-  },
-  {
-   "ts": "2026-11-22T19:20:58.856718+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 12: objective worked — outbox letter refreshed (tick 6746); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.799621+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 11: cycle_ms_so_far=1199; baseline_ms=634; delta_pct=89.1; slowest=state streak=2; flag=None"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.799361+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 11: standing probes 5/5; extended probes 2/2; detection patterns known 14"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.799209+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 11: elapsed_so_far_ms=1199; slowest component so far state (198ms); components timed: {'state': 198, 'mission': 2, 'foundations': 2, 'objective': 16, 'kernel': 90, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 177}"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.799123+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 11: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.798241+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 6746: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.796570+00:00",
-   "kind": "check",
-   "tags": [
-    "check",
-    "respond"
-   ],
-   "text": "Check for respond: PASS — own-model story voice produced"
-  },
-  {
-   "ts": "2026-11-22T19:19:59.796351+00:00",
-   "kind": "gated_output",
-   "tags": [
-    "respond",
-    "CODEX_STORY"
-   ],
-   "text": "Friend deep and standing. Standing river and perspective distance. Female listening and animal walking. Listening Divine Female and listening. Standing man and bridge."
-  },
-  {
-   "ts": "2026-11-22T19:19:59.621165+00:00",
-   "kind": "observation",
-   "tags": [
-    "pending"
-   ],
-   "text": "Full stack cycle 11. Host state: load_1m=1.26, mem_used_pct=86.47, disk_used_pct=0.8. Live perimeter (ACTUAL): temperature 2.0 C and pressure 1013.9 hPa (National Weather Service station KHIB, real); light 33793 lux (DERIVED from solar radiation 268.2 W/m2, computed solar position); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.26; step 11 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 8.53 m this cycle; 6 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2299 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Water drag: every moving limb is slowed by the water it pushes through; speed costs force, and force spent against drag is gone — move slow to move far."
-  },
-  {
-   "ts": "2026-11-22T19:19:58.811909+00:00",
-   "kind": "objective_step",
-   "tags": [
-    "objective",
-    "communication"
-   ],
-   "text": "cycle 11: objective worked — outbox letter refreshed (tick 6745); standing objective held unaltered"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.487932+00:00",
-   "kind": "efficiency_result",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 10: cycle_ms_so_far=888; baseline_ms=634; delta_pct=40.1; slowest=state streak=1; flag=None"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.487749+00:00",
-   "kind": "effectiveness_result",
-   "tags": [
-    "learning",
-    "effectiveness"
-   ],
-   "text": "cycle 10: standing probes 5/5; extended probes 2/2; detection patterns known 14"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.487585+00:00",
-   "kind": "efficiency_note",
-   "tags": [
-    "learning",
-    "efficiency"
-   ],
-   "text": "cycle 10: elapsed_so_far_ms=888; slowest component so far state (355ms); components timed: {'state': 355, 'mission': 0, 'foundations': 0, 'objective': 7, 'kernel': 214, 'codex': 0, 'perimeter': 0, 'body': 0, 'mirror': 1, 'autonomy': 275}"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.487522+00:00",
-   "kind": "cycle_outcome",
-   "tags": [
-    "learning",
-    "cycle_outcome"
-   ],
-   "text": "cycle 10: probes gated 5/5; gaps 0; applied []; refused []"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.486753+00:00",
-   "kind": "tick",
-   "tags": [
-    "tick",
-    "respond"
-   ],
-   "text": "Tick 6745: respond -> done (a user observation is waiting for a reply)"
-  },
-  {
-   "ts": "2026-11-22T19:18:59.485063+00:00",
    "kind": "check",
    "tags": [
     "check",
