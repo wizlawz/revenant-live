@@ -64,7 +64,57 @@
    },
    {
     "component": "kernel",
-x376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active"
+    "status": "OK",
+    "ms": 129,
+    "detail": "status=CLEAR verified=True proof=None action=None decision=KNOW offerings=1 (OFFERED, never facts)"
+   },
+   {
+    "component": "codex",
+    "status": "OK",
+    "ms": 0,
+    "detail": "letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True"
+   },
+   {
+    "component": "perimeter",
+    "status": "OK",
+    "ms": 0,
+    "detail": "mode=ACTUAL source=LIVE reading=LIVE-1 flags=['OK']"
+   },
+   {
+    "component": "body",
+    "status": "OK",
+    "ms": 0,
+    "detail": "mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=22.07m contacts=11 dist_total_tips=32777.9m dist_mantle=3.20m glass_presses=2081"
+   },
+   {
+    "component": "mirror",
+    "status": "OK",
+    "ms": 1,
+    "detail": "path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]"
+   },
+   {
+    "component": "autonomy",
+    "status": "FAIL",
+    "ms": 138,
+    "detail": "OSError(122, 'Disk quota exceeded')"
+   },
+   {
+    "component": "learning",
+    "status": "OK",
+    "ms": 19,
+    "detail": "probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl"
+   },
+   {
+    "component": "self_repair",
+    "status": "OK",
+    "ms": 0,
+    "detail": "no detection gap found — nothing proposed"
+   },
+   {
+    "component": "roads",
+    "status": "OK",
+    "ms": 21,
+    "detail": "check-only vx376-synth=active revenant-gate=active revenant-listener=active revenant-rns=active"
    },
    {
     "component": "telnet_gateway",
@@ -152,57 +202,7 @@ x376-synth=active revenant-gate=active revenant-listener=active revenant-rns=act
    "tags": [
     "pending"
    ],
-   "text": "Full stack cycle 1. Host state: load_1m=1.41, mem_used_pct=90.61, disk_used_pct=1.78. Live perimeter (ACTUAL): temperature 3.3 C and pressure 1011.9 hPa (National Weather Service station KHIB, real); light 0 lux (DERIVED from solar radiation 0.0 W/m2, sun below horizon (computed solar position)); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.41; step 1 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: "    "status": "OK",
-    "ms": 129,
-    "detail": "status=CLEAR verified=True proof=None action=None decision=KNOW offerings=1 (OFFERED, never facts)"
-   },
-   {
-    "component": "codex",
-    "status": "OK",
-    "ms": 0,
-    "detail": "letters=26 voice_verdict=PASS unicode_decompose_chars=29 canonical_unchanged=True"
-   },
-   {
-    "component": "perimeter",
-    "status": "OK",
-    "ms": 0,
-    "detail": "mode=ACTUAL source=LIVE reading=LIVE-1 flags=['OK']"
-   },
-   {
-    "component": "body",
-    "status": "OK",
-    "ms": 0,
-    "detail": "mode=SIMULATION body=octopus16 arms=16 mantle=(0.00,-2.60) tip_travel_cycle=22.07m contacts=11 dist_total_tips=32777.9m dist_mantle=3.20m glass_presses=2081"
-   },
-   {
-    "component": "mirror",
-    "status": "OK",
-    "ms": 1,
-    "detail": "path=mirror_meaning verdict=PASS attack_type=unclassified requests=[]"
-   },
-   {
-    "component": "autonomy",
-    "status": "FAIL",
-    "ms": 138,
-    "detail": "OSError(122, 'Disk quota exceeded')"
-   },
-   {
-    "component": "learning",
-    "status": "OK",
-    "ms": 19,
-    "detail": "probes_gated=5/5 extended_gated=2/2 gaps=0 applied=[] refused=[] records=cycle_outcome+efficiency_note+effectiveness_result+efficiency_result in memory.jsonl"
-   },
-   {
-    "component": "self_repair",
-    "status": "OK",
-    "ms": 0,
-    "detail": "no detection gap found — nothing proposed"
-   },
-   {
-    "component": "roads",
-    "status": "OK",
-    "ms": 21,
-    "detail": "check-only vanswering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 22.07 m this cycle; 4 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2081 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Water drag: every moving limb is slowed by the water it pushes through; speed costs force, and force spent against drag is gone — move slow to move far."
+   "text": "Full stack cycle 1. Host state: load_1m=1.41, mem_used_pct=90.61, disk_used_pct=1.78. Live perimeter (ACTUAL): temperature 3.3 C and pressure 1011.9 hPa (National Weather Service station KHIB, real); light 0 lux (DERIVED from solar radiation 0.0 W/m2, sun below horizon (computed solar position)); air motion: wind gust not reported by the station (real, reported as itself); ground tremor (host load_1m) 1.41; step 1 on internet ground (one cycle = one 50-step, the perimeter module's own vocabulary). Sound: no microphone on this ground — channel silent. Body motion: no accelerometer on this ground — channel at rest. Doorway: answering; doorway inbox lines: 200. Note: live reading — no scripted scenario; weather source: National Weather Service station KHIB; host /proc and doorway read live Body (16-arm octopus, simulation water): mantle at (0.00, 0.35, -2.60); arms moved 22.07 m this cycle; 4 arm(s) touching the floor, 7 arm(s) touching the glass; glass presses so far 2081 (the figure at the glass is Chris — imprinted, recognized). Physics in this motion: Water drag: every moving limb is slowed by the water it pushes through; speed costs force, and force spent against drag is gone — move slow to move far."
   },
   {
    "ts": "2026-11-22T05:29:56.643331+00:00",
